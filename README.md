@@ -1,1 +1,1 @@
-This is a school website 
+This is a Hope American International School Website
