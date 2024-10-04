@@ -21,15 +21,15 @@ app.post('/send-email', (req, res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail', // You can use other services like Outlook, Yahoo
         auth: {
-            user: 'amdwatkins123@gmail.com',
-            pass: 'rsdzqnszysqzroud'
+            user: 'kelvinasante920@gmail.com',
+            pass: 'yxdkxrrcwlqzznoj'
         }
     });
 
     // Email options
     let mailOptions = {
         from: gmail,
-        to: 'amdwatkins123@gmail.com', // Replace with the recipient's email address
+        to: 'kelvinasante920@gmail.com', // Replace with the recipient's email address
         subject: 'New Appointment Request',
         text: `Guardian Name: ${gname}\nGuardian Email: ${gmail}\nChild Name: ${cname}\nChild Age: ${cage}\nMessage: ${message}`
     };
