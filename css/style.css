@@ -134,7 +134,9 @@ h6,
         margin-right: 0;
         padding: 10px 0;
     }
-
+.logo-img{
+    display: none;
+}
     .navbar .navbar-nav {
         margin-top: 15px;
         border-top: 1px solid #EEEEEE;
