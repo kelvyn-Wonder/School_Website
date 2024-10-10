@@ -1,8 +1,8 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FE5D37;
+    --primary: #320098;
     --light: #FFF5F3;
-    --dark: #103741;
+    --dark: #000000;
 }
 
 .back-to-top {
@@ -37,6 +37,7 @@
 
 .btn.btn-primary {
     color: #FFFFFF;
+    background: #320098;
 }
 
 .btn-square {

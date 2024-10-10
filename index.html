@@ -84,7 +84,7 @@
             <div class="owl-carousel header-carousel position-relative">
                 <div class="owl-carousel-item position-relative">
                     <img class="img-fluid" src="./img/school-img/school-building.jpeg" alt="">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(1, 6, 15, 0.893);">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(8, 1, 24, 0.859);">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-10 col-lg-8">
@@ -99,7 +99,7 @@
                 </div>
                 <div class="owl-carousel-item position-relative">
                     <img class="img-fluid" src="./img/school-img/carousel-2.jpeg" alt="">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(1, 6, 15, 0.893);">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(8, 1, 24, 0.859);">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-10 col-lg-8">
@@ -404,18 +404,18 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4">Make Appointment</h1>
-                                <form>
+                                <form id="appointmentForm" method="POST"  ">
                                     <div class="row g-3">
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name" required>
-                                                <label for="gname" placeholder="required">Gurdian Name</label>
+                                                <input type="text" class="form-control border-0" id="gname" placeholder="Guardian Name" required>
+                                                <label for="gname">Guardian Name</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email" required>
-                                                <label for="gmail">Gurdian Email</label>
+                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Guardian Email" required>
+                                                <label for="gmail">Guardian Email</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -432,7 +432,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                                <textarea class="form-control border-0" id="message" placeholder="Message" style="height: 100px"></textarea>
                                                 <label for="message">Message</label>
                                             </div>
                                         </div>
@@ -651,6 +651,35 @@
 
     <!-- Design Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+        
+            const gname = document.getElementById('gname').value;
+            const gmail = document.getElementById('gmail').value;
+            const cname = document.getElementById('cname').value;
+            const cage = document.getElementById('cage').value;
+            const message = document.getElementById('message').value;
+        
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    gname, gmail, cname, cage, message
+                }),
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert('Appointment submitted successfully: ' + data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+        </script>
 </body>
 
 </html>
