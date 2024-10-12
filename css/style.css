@@ -1,6 +1,7 @@
 /********** Template CSS **********/
 :root {
     --primary: #320098;
+    --second: #fdcc03;
     --light: #FFF5F3;
     --dark: #000000;
 }
@@ -35,10 +36,10 @@
     transition: .5s;
 }
 
-.btn.btn-primary {
+/* .btn.btn-primary {
     color: #FFFFFF;
     background: #320098;
-}
+} */
 
 .btn-square {
     width: 38px;
@@ -84,6 +85,11 @@ h4,
 .display-6 {
     font-family: 'Lobster Two', cursive;
     font-weight: 700;
+}
+
+body{
+    background-color: #f2f2f2;
+    color: #1f2937;
 }
 
 h5,
@@ -172,19 +178,18 @@ h6,
     position: absolute;
     content: "";
     width: 100%;
-    height: 10px;
+     
     top: 0;
     left: 0;
-    background: url(../img/bg-header-top.png) center center repeat-x;
+    background: url(../img/school-img/Group-image2.jpeg) center center repeat-x;
     z-index: 1;
 }
 
 .header-carousel::after,
 .page-header::after {
-    height: 19px;
     top: auto;
     bottom: 0;
-    background: url(../img/bg-header-bottom.png) center center repeat-x;
+    background: url(../img/school-img/Group-image2.jpeg) center center repeat-x;
 }
 
 @media (max-width: 768px) {
@@ -238,12 +243,12 @@ h6,
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--second);
+    border-color: var(--second);
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.661), rgb(0, 0, 0)), url(../img/school-img/Group-image2.jpeg) center center no-repeat;
     background-size: cover;
 }
 
@@ -343,9 +348,9 @@ h6,
     transition: .5s;
 }
 
-.about-img img:hover {
+/* .about-img img:hover {
     background: var(--primary) !important;
-}
+} */
 
 
 /*** Classes ***/
@@ -439,7 +444,7 @@ h6,
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid #320098;
     border-radius: 45px;
     transition: .3s;
 }
