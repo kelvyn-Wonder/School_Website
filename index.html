@@ -52,7 +52,7 @@
                    
                     HOPE AMERICAN
                 </h1>
-                
+                <p class="subtile">International School</p>
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -672,13 +672,21 @@
             })
             .then(response => response.text())
             .then(data => {
-                alert('Appointment submitted successfully: ' + data);
+                // Clear the form inputs
+                document.getElementById('gname').value = "";
+                document.getElementById('gmail').value = "";
+                document.getElementById('cname').value = "";
+                document.getElementById('cage').value = "";
+                document.getElementById('message').value = "";
+                console.log('Appointment submitted successfully: ' + data);
+    
             })
             .catch(error => {
                 console.error('Error:', error);
             });
         });
-        </script>
+    </script>
+    
 </body>
 
 </html>

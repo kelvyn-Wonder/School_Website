@@ -192,6 +192,7 @@ h6,
     background: url(../img/school-img/Group-image2.jpeg) center center repeat-x;
 }
 
+
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
@@ -251,11 +252,37 @@ h6,
     background: linear-gradient(rgba(0, 0, 0, 0.661), rgb(0, 0, 0)), url(../img/school-img/Group-image2.jpeg) center center no-repeat;
     background-size: cover;
 }
+.student-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.661), rgb(0, 0, 0)), url(../img/school-img/Graduation-day5.jpeg) center center no-repeat;
+    background-size: cover;
+}
+
+.student-header::before,
+.student-header::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+     
+    top: 0;
+    left: 0;
+    background: url(../img/school-img/Graduation-day5.jpeg) center center repeat-x;
+    z-index: 1;
+}
+
+.student-header::after {
+    top: auto;
+    bottom: 0;
+    background: url(../img/school-img/Graduation-day5.jpeg) center center repeat-x;
+}
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
 
+.subtile{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 /*** Facility ***/
 .facility-item .facility-icon {
