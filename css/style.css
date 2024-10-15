@@ -137,6 +137,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
+   
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
@@ -160,6 +161,7 @@ h6,
         transition: .5s;
         
     }
+   
 
     .navbar .nav-item:hover .dropdown-menu {
         top: 100%;
@@ -197,6 +199,9 @@ h6,
     .header-carousel .owl-carousel-item {
         position: relative;
         min-height: 500px;
+    }
+    #map1{
+        width: 348px;
     }
     
     .header-carousel .owl-carousel-item img {
